@@ -1,4 +1,5 @@
-﻿using Resume.Presenation.Models.Entities.MySkills;
+﻿using Resume.Domain.Models.Entities.Education;
+using Resume.Presenation.Models.Entities.MySkills;
 
 namespace Resume.Domain.RepositoryInterface
 {
@@ -6,5 +7,13 @@ namespace Resume.Domain.RepositoryInterface
     {
         //GetListOfMySkills
         List<MySkills> GetListOfMySkills();
+
+        Task AddMySkillToDataBase(MySkills mySkill);
+
+        //Task<MySkills> GetMySkillByIdAsync(int mySkillId);
+
+        //Task EditMySkill(MySkills mySkill);
+
+        //Task DeleteMySkill(MySkills mySkill);
     }
 }
