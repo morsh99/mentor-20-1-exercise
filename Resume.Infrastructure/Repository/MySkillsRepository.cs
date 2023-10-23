@@ -29,21 +29,21 @@ namespace Resume.Infrastructure.Repository
             await _context.SaveChangesAsync();
         }
 
-        //public async Task DeleteMySkill(MySkills mySkill)
-        //{
-        //    _context.MySkills.Remove(mySkill);
-        //    await _context.SaveChangesAsync();
-        //}
+        public async Task DeleteMySkill(MySkills mySkill)
+        {
+            _context.MySkills.Remove(mySkill);
+            await _context.SaveChangesAsync();
+        }
 
-        //public async Task EditMySkill(MySkills mySkill)
-        //{
-        //    _context.MySkills.Update(mySkill);
-        //    await _context.SaveChangesAsync();
-        //}
+        public async Task EditMySkill(MySkills mySkill)
+        {
+            _context.MySkills.Update(mySkill);
+            await _context.SaveChangesAsync();
+        }
 
-        //public Task<MySkills> GetMySkillByIdAsync(int mySkillId)
-        //{
-        //    return _context.MySkills.FirstOrDefaultAsync(p => p.Id == mySkillId);
-        //}
+        public Task<MySkills> GetMySkillByIdAsync(int mySkillId)
+        {
+            return _context.MySkills.FirstOrDefaultAsync(p => p.Id == mySkillId);
+        }
     }
 }

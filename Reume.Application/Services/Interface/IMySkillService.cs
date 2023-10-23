@@ -1,4 +1,5 @@
-﻿using Resume.Presenation.Models.Entities.MySkills;
+﻿using Resume.Presenation.Models.Entities.Experience;
+using Resume.Presenation.Models.Entities.MySkills;
 using Reume.Application.DTOs.AdminSide.Experince;
 using Reume.Application.DTOs.AdminSide.MySkills;
 
@@ -10,4 +11,10 @@ public interface IMySkillService
     List<MySkills> GetListOfMySkills();
 
     Task AddSkillToDataBase(CreateSkillAdminSideDTO model);
+
+    Task<MySkills> GetASkillByIdAsync(int mySkillId);
+
+    Task EditASkill(MySkills mySkills);
+
+    Task DeleteASkill(MySkills mySkills);
 }

@@ -1,4 +1,5 @@
-﻿using Resume.Presenation.Models.Entities.Experience;
+﻿using Resume.Domain.Models.Entities.Education;
+using Resume.Presenation.Models.Entities.Experience;
 using Reume.Application.DTOs.AdminSide.Education;
 using Reume.Application.DTOs.AdminSide.Experince;
 
@@ -10,4 +11,10 @@ public interface IExperienceService
     List<Experience> GetListOfExperience();
 
     Task AddExperienceToDataBase(CreateExperienceAdminSideDTO model);
+
+    Task<Experience> GetAnExperienceByIdAsync(int experienceId);
+
+    Task EditAnExperience(Experience experience);
+
+    Task DeleteAnExperience(Experience experience);
 }

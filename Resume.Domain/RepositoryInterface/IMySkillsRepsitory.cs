@@ -10,10 +10,10 @@ namespace Resume.Domain.RepositoryInterface
 
         Task AddMySkillToDataBase(MySkills mySkill);
 
-        //Task<MySkills> GetMySkillByIdAsync(int mySkillId);
+        Task<MySkills> GetMySkillByIdAsync(int mySkillId);
 
-        //Task EditMySkill(MySkills mySkill);
+        Task EditMySkill(MySkills mySkill);
 
-        //Task DeleteMySkill(MySkills mySkill);
+        Task DeleteMySkill(MySkills mySkill);
     }
 }

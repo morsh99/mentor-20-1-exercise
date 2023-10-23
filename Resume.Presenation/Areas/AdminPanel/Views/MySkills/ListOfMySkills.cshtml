@@ -51,18 +51,18 @@
                                             </td>
                                             <td>
                                                 <a class="badge badge-primary" style="cursor:pointer;"
-                                                   asp-action="EditAnEducation"
+                                                   asp-action="EditASkill"
                                                    asp-area="AdminPanel"
-                                                   asp-controller="Education"
-                                                   asp-route-educationId="@mySkill.Id">
+                                                   asp-controller="MySkills"
+                                                   asp-route-mySkillId="@mySkill.Id">
                                                     ویرایش
                                                 </a>
 
                                                 <a class="badge badge-danger" style="cursor:pointer;"
-                                                   asp-action="DeleteAnEducation"
+                                                   asp-action="DeleteASkill"
                                                    asp-area="AdminPanel"
-                                                   asp-controller="Education"
-                                                   asp-route-educationId="@mySkill.Id">حذف</a>
+                                                   asp-controller="MySkills"
+                                                   asp-route-mySkillId="@mySkill.Id">حذف</a>
                                             </td>
                                         </tr>
                                     }

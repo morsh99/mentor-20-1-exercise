@@ -10,10 +10,10 @@ namespace Resume.Domain.RepositoryInterface
 
         Task AddExperienceToDataBase(Experience experience);
 
-        //Task<Experience> GetExperienceByIdAsync(int experienceId);
+        Task<Experience> GetAnExperienceByIdAsync(int experienceId);
 
-        //Task EditExperience(Experience experience);
+        Task EditAnExperience(Experience experience);
 
-        //Task DeleteExperience(Experience experience);
+        Task DeleteAnExperience(Experience experience);
     }
 }

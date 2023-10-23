@@ -1,4 +1,7 @@
-﻿using Resume.Domain.RepositoryInterface;
+﻿using Resume.Domain.Models.Entities.Education;
+using Resume.Domain.RepositoryInterface;
+using Resume.Infrastructure.Repository;
+using Resume.Presenation.Models.Entities.Experience;
 using Resume.Presenation.Models.Entities.MySkills;
 using Reume.Application.DTOs.AdminSide.MySkills;
 using Reume.Application.Services.Interface;
@@ -32,5 +35,20 @@ public class MySkillService : IMySkillService
 
         //add to database 
         await _mySkillsRepsitory.AddMySkillToDataBase(mySkill);
+    }
+
+    public async Task EditASkill(MySkills mySkill)
+    {
+        await _mySkillsRepsitory.EditMySkill(mySkill);
+    }
+
+    public async Task DeleteASkill(MySkills mySkill)
+    {
+        await _mySkillsRepsitory.DeleteMySkill(mySkill);
+    }
+
+    public async Task<MySkills> GetASkillByIdAsync(int mySkillId)
+    {
+        return await _mySkillsRepsitory.GetMySkillByIdAsync(mySkillId);
     }
 }

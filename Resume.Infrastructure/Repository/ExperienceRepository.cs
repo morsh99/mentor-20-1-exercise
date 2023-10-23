@@ -30,21 +30,21 @@ namespace Resume.Infrastructure.Repository
             await _context.SaveChangesAsync();
         }
 
-        //public async Task DeleteExperience(Experience experience)
-        //{
-        //    _context.Educations.Remove(experience);
-        //    await _context.SaveChangesAsync();
-        //}
+        public async Task DeleteAnExperience(Experience experience)
+        {
+            _context.Experiences.Remove(experience);
+            await _context.SaveChangesAsync();
+        }
 
-        //public async Task EditExperience(Experience experience)
-        //{
-        //    _context.Educations.Update(experience);
-        //    await _context.SaveChangesAsync();
-        //}
+        public async Task EditAnExperience(Experience experience)
+        {
+            _context.Experiences.Update(experience);
+            await _context.SaveChangesAsync();
+        }
 
-        //public Task<Experience> GetExperienceByIdAsync(int experienceId)
-        //{
-        //    return _context.Experiences.FirstOrDefaultAsync(p => p.Id == experienceId);
-        //}
+        public Task<Experience> GetAnExperienceByIdAsync(int experienceId)
+        {
+            return _context.Experiences.FirstOrDefaultAsync(p => p.Id == experienceId);
+        }
     }
 }

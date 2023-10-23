@@ -1,4 +1,6 @@
-﻿using Resume.Domain.RepositoryInterface;
+﻿using Resume.Domain.Models.Entities.Education;
+using Resume.Domain.RepositoryInterface;
+using Resume.Infrastructure.Repository;
 using Resume.Presenation.Models.Entities.Experience;
 using Reume.Application.DTOs.AdminSide.Experince;
 using Reume.Application.Services.Interface;
@@ -36,5 +38,20 @@ public class ExperienceService : IExperienceService
 
         //add to database
         await _experienceRepository.AddExperienceToDataBase(experience);
+    }
+
+    public async Task EditAnExperience(Experience experience)
+    {
+        await _experienceRepository.EditAnExperience(experience);
+    }
+
+    public async Task DeleteAnExperience(Experience experience)
+    {
+        await _experienceRepository.DeleteAnExperience(experience);
+    }
+
+    public async Task<Experience> GetAnExperienceByIdAsync(int experienceId)
+    {
+        return await _experienceRepository.GetAnExperienceByIdAsync(experienceId);
     }
 }
