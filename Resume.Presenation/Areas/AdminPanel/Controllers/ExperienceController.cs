@@ -93,11 +93,11 @@ namespace Resume.Presenation.Areas.AdminPanel.Controllers
         {
             #region Get An Education By Id
 
-            var education = await _experienceService.GetAnExperienceByIdAsync(experienceId);
+            var experience = await _experienceService.GetAnExperienceByIdAsync(experienceId);
 
             #endregion
 
-            return View(experienceId);
+            return View(experience);
         }
 
         [HttpPost, ValidateAntiForgeryToken]
